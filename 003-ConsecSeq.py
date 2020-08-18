@@ -44,19 +44,52 @@ char_to_dots = {
 }
 
 
-def encode_morse(message):
-    encoded = ''
-    for i in range(len(message)):
-        if message[i] in char_to_dots or message[i].upper() in char_to_dots:
-            if message[i].upper() in char_to_dots:
-                encoded += (char_to_dots[message[i].upper()])
-            elif message[i] in char_to_dots:
-                encoded += char_to_dots[message[i]]
-            if i != len(message) - 1:
-                encoded += ' '
-    # encoded += '|'
-    # print(encoded)
-    return encoded
+# def encode_morse(message):
+#     encoded = ''
+#     for i in range(len(message)):
+#         if message[i] in char_to_dots or message[i].upper() in char_to_dots:
+#             if message[i].upper() in char_to_dots:
+#                 encoded += (char_to_dots[message[i].upper()])
+#             elif message[i] in char_to_dots:
+#                 encoded += char_to_dots[message[i]]
+#             if i != len(message) - 1:
+#                 encoded += ' '
+#     # encoded += '|'
+#     # print(encoded)
+#     return encoded
 
 
-encode_morse('Hello world, this is a test! 333')
+# encode_morse('Hello world, this is a test! 333')
+
+
+# def tallest_skyscraper(lst):
+#     max_height = len(lst) + 1
+
+#     for arr in lst:
+#         max_height -= 1
+#         for i in arr:
+#             if i == 1:
+#                 return max_height
+
+#     return 0
+
+
+# buildings = [
+#     [0, 0, 0, 0, 0, 1],
+#     [0, 0, 0, 0, 0, 1],
+#     [0, 1, 0, 0, 0, 1],
+#     [1, 1, 1, 1, 0, 1],
+#     [1, 1, 1, 1, 1, 1]
+# ]
+
+# print(tallest_skyscraper(buildings))
+
+def pentagonal(num):
+    ring = 0
+    
+    if num == 1:
+        ring = 1
+        dotArea = 1
+
+    for i in range(num):
+        ring += 5
